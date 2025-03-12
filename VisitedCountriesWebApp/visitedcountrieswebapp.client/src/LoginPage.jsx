@@ -34,7 +34,7 @@ function RegisterPage() {
 
 
     return (
-        <div>
+        <div className="form-container">
             <h1>Login</h1>
             <div>
                 <input
@@ -42,14 +42,16 @@ function RegisterPage() {
                     placeholder="Email"
                     value={email}
                     onChange={(e) => setEmail(e.target.value)}
+                    className="form-input"
                 />
                 <input
                     type="password"
                     placeholder="Password"
                     value={password}
                     onChange={(e) => setPassword(e.target.value)}
+                    className="form-input"
                 />
-                <button onClick={handleLogin}>Login</button>
+                <button onClick={handleLogin} className="form-button">Login</button>
             </div>
             {message && <p>{message}</p>}
         </div>

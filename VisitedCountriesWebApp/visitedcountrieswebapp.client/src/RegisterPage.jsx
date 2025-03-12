@@ -4,10 +4,16 @@ import { useNavigate } from "react-router-dom";
 function RegisterPage() {
     const [email, setEmail] = useState("");
     const [password, setPassword] = useState("");
+    const [confirmPassword, setConfirmPassword] = useState("");
     const [message, setMessage] = useState("");
     const navigate = useNavigate();
 
     const handleRegister = async () => {
+        if (password !== confirmPassword) {
+            setMessage("Passwords do not match");
+            return;
+        }
+
         try {
             const response = await fetch("https://localhost:7225/api/Auth/register", {
                 method: "POST",
@@ -21,7 +27,7 @@ function RegisterPage() {
                 const data = await response.text();
                 const jsonData = data ? JSON.parse(data) : {};
                 setMessage(jsonData.message);
-                navigate("/");
+                navigate("/login");
             } else {
                 const errorData = await response.text();
                 const errorJsonData = errorData ? JSON.parse(errorData) : {};
@@ -32,9 +38,8 @@ function RegisterPage() {
         }
     };
 
-
     return (
-        <div>
+        <div className="form-container">
             <h1>Register</h1>
             <div>
                 <input
@@ -42,14 +47,23 @@ function RegisterPage() {
                     placeholder="Email"
                     value={email}
                     onChange={(e) => setEmail(e.target.value)}
+                    className="form-input"
                 />
                 <input
                     type="password"
                     placeholder="Password"
                     value={password}
                     onChange={(e) => setPassword(e.target.value)}
+                    className="form-input"
                 />
-                <button onClick={handleRegister}>Register</button>
+                <input
+                    type="password"
+                    placeholder="Confirm Password"
+                    value={confirmPassword}
+                    onChange={(e) => setConfirmPassword(e.target.value)}
+                    className="form-input"
+                />
+                <button onClick={handleRegister} className="form-button">Register</button>
             </div>
             {message && <p>{message}</p>}
         </div>
