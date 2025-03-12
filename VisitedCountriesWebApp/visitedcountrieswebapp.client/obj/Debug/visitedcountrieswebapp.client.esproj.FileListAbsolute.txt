@@ -1,0 +1,1 @@
+D:\VisitedCountriesApp\VisitedCountriesWeb\VisitedCountriesWebApp\visitedcountrieswebapp.client\obj\Debug\visitedcountrieswebapp.client.esproj.CoreCompileInputs.cache
