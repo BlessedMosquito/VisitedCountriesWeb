@@ -21,7 +21,7 @@ function RegisterPage() {
                 const data = await response.text();
                 const jsonData = data ? JSON.parse(data) : {};
                 setMessage(jsonData.message);
-                navigate("/");
+                navigate("/main");
             } else {
                 const errorData = await response.text();
                 const errorJsonData = errorData ? JSON.parse(errorData) : {};
