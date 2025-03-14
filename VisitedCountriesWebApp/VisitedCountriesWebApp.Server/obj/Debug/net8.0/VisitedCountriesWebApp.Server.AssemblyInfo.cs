@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("VisitedCountriesWebApp.Server")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+bb561456ed8a031ab6e014092bcb4a9c79e94552")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+88a5604cd99b6c0154d7d3edef6f9d7364c686ba")]
 [assembly: System.Reflection.AssemblyProductAttribute("VisitedCountriesWebApp.Server")]
 [assembly: System.Reflection.AssemblyTitleAttribute("VisitedCountriesWebApp.Server")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

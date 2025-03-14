@@ -1,8 +1,18 @@
-﻿namespace VisitedCountriesWeb.Server.Data
+﻿using System.ComponentModel.DataAnnotations;
+
+public class UserRegisterModel
 {
-    public class UserRegisterModel
-    {
-        public string Email { get; set; }
-        public string Password { get; set; }
-    }
+    [Required]
+    public string UserName { get; set; }
+
+    [Required]  
+    [EmailAddress]  
+    public string Email { get; set; }
+
+    [Required]  
+    [MinLength(6)]  
+    public string Password { get; set; }
+
+    [Compare("Password", ErrorMessage = "The password and confirmation password do not match.")]
+    public string ConfirmPassword { get; set; }
 }

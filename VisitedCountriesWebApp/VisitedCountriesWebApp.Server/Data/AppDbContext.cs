@@ -1,8 +1,10 @@
-﻿using Microsoft.EntityFrameworkCore;
+﻿using Microsoft.AspNetCore.Identity;
+using Microsoft.EntityFrameworkCore;
+using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 
 namespace VisitedCountriesWeb.Server.Data
 {
-    public class AppDbContext : DbContext
+    public class AppDbContext : IdentityDbContext<IdentityUser>
     {
 
         public IConfiguration _config;
@@ -14,7 +16,5 @@ namespace VisitedCountriesWeb.Server.Data
         {
             optionsBuilder.UseSqlServer(_config.GetConnectionString("DatabaseConnection"));
         }
-
-        public DbSet<User> Users { get; set; }
     }
 }

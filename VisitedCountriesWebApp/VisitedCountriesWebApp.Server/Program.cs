@@ -1,7 +1,10 @@
+using Microsoft.AspNetCore.Identity;
+using Microsoft.EntityFrameworkCore;
 using VisitedCountriesWeb.Server.Data;
 
 var builder = WebApplication.CreateBuilder(args);
 
+// Dodajemy konfiguracjê CORS
 builder.Services.AddCors(options =>
 {
     options.AddPolicy("AllowSpecificOrigin", policy =>
@@ -13,20 +16,32 @@ builder.Services.AddCors(options =>
     });
 });
 
+// Konfiguracja DbContext i Identity
+builder.Services.AddDbContext<AppDbContext>(options =>
+    options.UseSqlServer(builder.Configuration.GetConnectionString("DatabaseConnection"))); // Zmienny connection string
+
+// Dodajemy Identity do aplikacji
+builder.Services.AddIdentity<IdentityUser, IdentityRole>()
+    .AddEntityFrameworkStores<AppDbContext>()
+    .AddDefaultTokenProviders();
+
+// Rejestracja innych serwisów
 builder.Services.AddControllers();
-// Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
+
+// Rejestracja aplikacji DbContext
 builder.Services.AddScoped<AppDbContext>();
 
 var app = builder.Build();
 
+// Middleware
 app.UseCors("AllowSpecificOrigin");
 
-app.UseDefaultFiles();
+app.UseDefaultFiles();  // Dzia³a z plikami statycznymi
 app.UseStaticFiles();
 
-// Configure the HTTP request pipeline.
+// Konfiguracja Swaggera
 if (app.Environment.IsDevelopment())
 {
     app.UseSwagger();
@@ -35,10 +50,13 @@ if (app.Environment.IsDevelopment())
 
 app.UseHttpsRedirection();
 
+// U¿ywamy uwierzytelniania i autoryzacji
+app.UseAuthentication();  // Dodajemy middleware do uwierzytelniania
 app.UseAuthorization();
 
-app.MapControllers();
+app.MapControllers();  // Mapowanie kontrolerów
 
+// Konfiguracja domyœlnej strony
 app.MapFallbackToFile("/index.html");
 
 app.Run();

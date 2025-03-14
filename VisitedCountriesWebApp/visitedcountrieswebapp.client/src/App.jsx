@@ -8,12 +8,12 @@ import NavBar from "./NavBar";
 function App() {
     return (
         <Router>
-        <NavBar/>
+            <NavBar />
             <Routes>
-                <Route path="/" element={<HomePage />} /> { }
-                <Route path="/register" element={<RegisterPage />} /> { }
-                <Route path="/login" element={<LoginPage />} /> { }
-                <Route path="/main" elemet={<MainPage />} /> {}
+                <Route path="/" element={<HomePage />} />
+                <Route path="/register" element={<RegisterPage />} />
+                <Route path="/login" element={<LoginPage />} />
+                <Route path="/main" element={<MainPage />} />
             </Routes>
         </Router>
     );
