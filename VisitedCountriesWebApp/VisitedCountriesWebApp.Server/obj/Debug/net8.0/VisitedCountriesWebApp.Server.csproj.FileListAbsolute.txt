@@ -175,3 +175,4 @@ D:\VisitedCountriesApp\VisitedCountriesWeb\VisitedCountriesWebApp\VisitedCountri
 D:\VisitedCountriesApp\VisitedCountriesWeb\VisitedCountriesWebApp\VisitedCountriesWebApp.Server\bin\Debug\net8.0\Microsoft.AspNetCore.Identity.EntityFrameworkCore.dll
 D:\VisitedCountriesApp\VisitedCountriesWeb\VisitedCountriesWebApp\VisitedCountriesWebApp.Server\bin\Debug\net8.0\Microsoft.Extensions.Identity.Core.dll
 D:\VisitedCountriesApp\VisitedCountriesWeb\VisitedCountriesWebApp\VisitedCountriesWebApp.Server\bin\Debug\net8.0\Microsoft.Extensions.Identity.Stores.dll
+D:\VisitedCountriesApp\VisitedCountriesWeb\VisitedCountriesWebApp\VisitedCountriesWebApp.Server\bin\Debug\net8.0\Newtonsoft.Json.dll

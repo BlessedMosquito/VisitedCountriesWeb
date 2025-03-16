@@ -1,17 +1,16 @@
-//import { useState } from "react";
-//import { useNavigate } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 
+export default function MainPage() {
+    const navigate = useNavigate(); // Musi byæ wewn¹trz komponentu!
 
+    const handleRoute = () => {
+        navigate("/search");
+    };
 
-function MainPage()
-{
-
-    //const navigate = useNavigate();
-
-
-    <div>
-        <h1> Search</h1>
-    </div>
+    return (
+        <div>
+            <h1>Hello</h1>
+            <button onClick={handleRoute}>Search</button>
+        </div>
+    );
 }
-
-export default MainPage();

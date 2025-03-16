@@ -1,6 +1,8 @@
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
+using System.Text;
 using VisitedCountriesWeb.Server.Data;
+using VisitedCountriesWebApp.Server.Controllers;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -32,6 +34,8 @@ builder.Services.AddSwaggerGen();
 
 // Rejestracja aplikacji DbContext
 builder.Services.AddScoped<AppDbContext>();
+
+builder.Services.AddHttpClient<APIQueryController>();
 
 var app = builder.Build();
 

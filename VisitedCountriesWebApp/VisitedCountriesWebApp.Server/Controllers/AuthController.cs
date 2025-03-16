@@ -62,19 +62,21 @@ public class AuthController : ControllerBase
             });
         }
 
-        //var token = GenerateJwtToken(user);
-        //return Ok(new { token });
-        return Ok();
+        var token = GenerateJwtToken(user);
+        return Ok(new { token });
+        //return Ok();
     }
 
     private string GenerateJwtToken(IdentityUser user)
     {
         var key = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(_configuration["Jwt:Key"]));
         var credentials = new SigningCredentials(key, SecurityAlgorithms.HmacSha256);
+
         var claims = new[]
         {
             new Claim(JwtRegisteredClaimNames.Sub, user.Id),
-            new Claim(JwtRegisteredClaimNames.Email, user.Email)
+            new Claim(JwtRegisteredClaimNames.Email, user.Email),
+            //new Claim(ClaimTypes.Name, user.UserName)
         };
 
         var token = new JwtSecurityToken(
