@@ -22,9 +22,9 @@ export default function SearchPage() {
 
 
     return (
-        <div>
+        <div className="div-container-style-2">
             <h1>Search for a Country</h1>
-            <input
+            <input className="search-input"
                 type="text"
                 value={countryName}
                 onChange={(e) => setCountryName(e.target.value)}
@@ -35,8 +35,8 @@ export default function SearchPage() {
             {error && <p style={{ color: "red" }}>{error}</p>}
 
             {country && (
-                <div>
-                    <h2>{country.name.common} ({country.code})</h2>
+                <div className="div-container-style">
+                    <h2 >{country.name.common} ({country.code})</h2>
                     <p><strong>Capital:</strong> {country.capital?.join(", ") || "N/A"}</p>
                     <p><strong>Population:</strong> {country.population.toLocaleString()}</p>
                     <p><strong>Region:</strong> {country.region} - {country.subRegion}</p>
