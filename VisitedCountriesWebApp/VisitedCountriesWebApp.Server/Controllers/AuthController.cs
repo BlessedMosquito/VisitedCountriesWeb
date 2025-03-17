@@ -39,54 +39,38 @@ public class AuthController : ControllerBase
     {
         IdentityUser user = null;
 
-        // Sprawdzenie, czy wprowadzono email, czy username
         if (!string.IsNullOrEmpty(model.Email))
         {
             user = await _userManager.FindByEmailAsync(model.Email); // Szuka użytkownika po emailu
         }
 
-        // Jeśli użytkownik nie został znaleziony, zwraca błąd
         if (user == null)
         {
             return Unauthorized(new { message = "Invalid credentials" });
         }
 
-        // Próba logowania przy użyciu hasła
-        var result = await _signInManager.PasswordSignInAsync(user, model.Password, false, false);
+        var result = await _signInManager.PasswordSignInAsync(user, model.Password, true, false);
         if (!result.Succeeded)
         {
-            return Unauthorized(new
-            {
-                message = "Invalid credentials",
-                reason = result.ToString() // Dodatkowe informacje o niepowodzeniu
-            });
+            return Unauthorized(new { message = "Invalid credentials" });
         }
 
-        var token = GenerateJwtToken(user);
-        return Ok(new { token });
-        //return Ok();
+        await _signInManager.SignInAsync(user, isPersistent: true);
+
+
+        return Ok(new {});
     }
 
-    private string GenerateJwtToken(IdentityUser user)
+    [HttpPost("logout")]
+    public async Task<IActionResult> Logout()
     {
-        var key = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(_configuration["Jwt:Key"]));
-        var credentials = new SigningCredentials(key, SecurityAlgorithms.HmacSha256);
+        await _signInManager.SignOutAsync();
+        return Ok(new { message = "Logged out succesfully"});
+    }
 
-        var claims = new[]
-        {
-            new Claim(JwtRegisteredClaimNames.Sub, user.Id),
-            new Claim(JwtRegisteredClaimNames.Email, user.Email),
-            //new Claim(ClaimTypes.Name, user.UserName)
-        };
-
-        var token = new JwtSecurityToken(
-            _configuration["Jwt:Issuer"],
-            _configuration["Jwt:Issuer"],
-            claims,
-            expires: DateTime.UtcNow.AddHours(2),
-            signingCredentials: credentials
-        );
-
-        return new JwtSecurityTokenHandler().WriteToken(token);
+    [HttpGet("authenticated")]
+    public IActionResult IsAuthenticated()
+    {
+        return Ok(new { isAuthenticated = User.Identity.IsAuthenticated });
     }
 }

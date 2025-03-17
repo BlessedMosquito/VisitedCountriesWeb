@@ -1,14 +1,32 @@
-import { Link } from "react-router-dom";
-import { useAuth } from "./AuthContext"; 
+import { Link, useNavigate } from "react-router-dom";
+import { useState, useEffect } from "react";
+import { isAuthenticated, logout } from "./AuthService";
 
 export default function NavBar() {
-    const { isAuthenticated, logout: handleLogout } = useAuth();
+    const [authenticated, setAuthenticated] = useState(false);
+
+    const navigate = useNavigate();
+
+    useEffect(() => {
+        const checkAuth = async () => {
+            const result = await isAuthenticated(); 
+            setAuthenticated(result);
+        };
+
+        checkAuth();
+    }, []); 
+
+    const handleLogout = async () => {
+        await logout();
+        setAuthenticated(false);
+        navigate("/");
+    };
 
     return (
         <nav className="nav-bar">
-            <Link to="/" className="site-title">Visited Countries</Link>
+            <Link to={authenticated ? "/main" : "/"} className="site-title">Visited Countries</Link>
             <ul>
-                {isAuthenticated ? (
+                {authenticated ? (
                     <>
                         <li><button onClick={handleLogout}>Logout</button></li>
                     </>

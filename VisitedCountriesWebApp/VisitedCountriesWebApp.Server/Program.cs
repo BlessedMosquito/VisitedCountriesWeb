@@ -27,6 +27,16 @@ builder.Services.AddIdentity<IdentityUser, IdentityRole>()
     .AddEntityFrameworkStores<AppDbContext>()
     .AddDefaultTokenProviders();
 
+builder.Services.ConfigureApplicationCookie(options =>
+{
+    options.LoginPath = "/api/Auth/login";
+    options.Cookie.HttpOnly = true;  
+    options.Cookie.SecurePolicy = CookieSecurePolicy.Always;
+    options.Cookie.SameSite = SameSiteMode.Lax;
+    options.ExpireTimeSpan = TimeSpan.FromMinutes(30);
+    options.Cookie.Domain = ".localhost";
+});
+
 // Rejestracja innych serwisów
 builder.Services.AddControllers();
 builder.Services.AddEndpointsApiExplorer();
@@ -55,7 +65,7 @@ if (app.Environment.IsDevelopment())
 app.UseHttpsRedirection();
 
 // U¿ywamy uwierzytelniania i autoryzacji
-app.UseAuthentication();  // Dodajemy middleware do uwierzytelniania
+app.UseAuthentication();  
 app.UseAuthorization();
 
 app.MapControllers();  // Mapowanie kontrolerów

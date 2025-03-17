@@ -24,7 +24,7 @@ function RegisterPage() {
         <div className="form-container">
             <h1>Register</h1>
             <input
-                type="userName"
+                type="text"
                 placeholder="UserName"
                 value={userName}
                 onChange={(e) => setUsername(e.target.value)}
@@ -45,7 +45,7 @@ function RegisterPage() {
                 className="form-input"
             />
             <input
-                type="confirmPassword"
+                type="password"
                 placeholder="Confirm Password"
                 value={confirmPassword}
                 onChange={(e) => setConfirmPassword(e.target.value)}

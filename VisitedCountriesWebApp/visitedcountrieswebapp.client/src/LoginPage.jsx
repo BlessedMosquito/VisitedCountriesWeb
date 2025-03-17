@@ -12,8 +12,9 @@ function LoginPage() {
     const handleLogin = async () => {
         try {
             await login(email, password);
-            setMessage("Login successful!");
+            setMessage("Login successful!");      
             navigate("/main");
+            window.location.reload();
         } catch (error) {
             setMessage(error.message);
         }

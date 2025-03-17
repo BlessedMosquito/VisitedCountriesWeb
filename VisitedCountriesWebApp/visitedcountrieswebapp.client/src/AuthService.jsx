@@ -1,7 +1,6 @@
-import axios  from "axios";
+import axios from "axios";
 
 const API_URL = "https://localhost:7225/api/Auth";
-
 
 export const register = async (userName, email, password, confirmPassword) => {
     try {
@@ -17,31 +16,33 @@ export const register = async (userName, email, password, confirmPassword) => {
     }
 };
 
-
 export const login = async (email, password) => {
     try {
         const response = await axios.post(`${API_URL}/login`, {
             userName: email,
             email,
             password,
-        });
-
-        const data = response.data;
-        localStorage.setItem("token", data.token);
-        return data;
+        }, { withCredentials: true });
+        return response.data;
     } catch (error) {
         throw error.response?.data || { message: "Invalid credentials" };
     }
 };
 
-
-
-// Wylogowanie
-export const logout = () => {
-    localStorage.removeItem("token");
+export const logout = async () => {
+    try {
+        await axios.post(`${API_URL}/logout`, {}, { withCredentials: true });
+    } catch (error) {
+        console.error("Logout failed", error);
+    }
 };
 
-// Sprawdzenie, czy u¿ytkownik jest zalogowany
-export const isAuthenticated = () => {
-    return !!localStorage.getItem("token");
+export const isAuthenticated = async () => {
+    try {
+        const response = await axios.get(`${API_URL}/authenticated`, { withCredentials: true });
+        return response.data.isAuthenticated;
+    } catch (error) {
+        console.error("Error checking authentication", error);
+        return false;
+    }
 };

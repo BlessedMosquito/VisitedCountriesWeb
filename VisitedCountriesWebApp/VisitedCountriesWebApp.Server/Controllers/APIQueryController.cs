@@ -45,7 +45,7 @@ namespace VisitedCountriesWebApp.Server.Controllers
                 string json = await response.Content.ReadAsStringAsync();
                 List<Country> countries = JsonConvert.DeserializeObject<List<Country>>(json);
 
-                return Ok(countries[0]) ;
+                return Ok(countries[0]) ; 
             }
             catch (Exception ex)
             {
