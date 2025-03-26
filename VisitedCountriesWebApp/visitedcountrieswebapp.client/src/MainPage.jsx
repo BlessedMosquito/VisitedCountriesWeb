@@ -9,9 +9,13 @@ export default function MainPage() {
  
     const navigate = useNavigate();
 
-    const handleRoute = () => {
+    const searchRoute = () => {
         navigate("/search");
     };
+
+    const tableRoute = () => {
+        navigate("/table");
+    }
 
     useEffect(() => {
         const checkAuth = async () => {
@@ -33,7 +37,8 @@ export default function MainPage() {
     return (
         <div>
             <h1>Welcome, {username ? username : "User"}</h1>
-            <button onClick={handleRoute}>Search</button>
+            <button onClick={searchRoute}>Search</button>
+            <button onClick={tableRoute}>Table</button>
         </div>
     );
 }

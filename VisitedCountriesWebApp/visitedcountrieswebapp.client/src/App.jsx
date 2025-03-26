@@ -5,6 +5,7 @@ import LoginPage from "./LoginPage";
 import MainPage from "./MainPage";
 import SearchPage from "./SearchPage";
 import NavBar from "./NavBar";
+import TablePage from "./TablePage";
 
 function App() {
 
@@ -16,7 +17,8 @@ function App() {
                     <Route path="/register" element={<RegisterPage />} />
                     <Route path="/login" element={<LoginPage />} />
                     <Route path="/main" element={<MainPage />} />
-                     <Route path="/search" element={<SearchPage />} />
+                    <Route path="/search" element={<SearchPage />} />
+                    <Route path="/table" element={<TablePage />} />
                 </Routes>
             </Router>
 

@@ -34,7 +34,7 @@ namespace VisitedCountriesWebApp.Server.Controllers
             }
             if (!DateTime.TryParseExact(request.visitDate, "MMMM yyyy", CultureInfo.InvariantCulture, DateTimeStyles.None, out DateTime parsedDate))
             {
-                return BadRequest("Invalid date format. Expected format: yyyy MMMM (e.g., '2024 March')");
+                return BadRequest("Invalid date format. Expected format: yyyy MMMM");
             }
 
             var countryDatabase = new CountryDatabase
@@ -54,6 +54,22 @@ namespace VisitedCountriesWebApp.Server.Controllers
             await _context.SaveChangesAsync();
 
             return Ok();
+        }
+
+        [Authorize]
+        [HttpGet("get/all")]
+        public async Task<IActionResult> GetAllCountries()
+        {
+            var user = await _userManager.GetUserAsync(HttpContext.User);
+            if (user == null)
+            {
+                System.Console.WriteLine("User is null, authentication failed!");
+                return Unauthorized("User not found");
+            }
+
+            var countries = _context.Countries.Where(c => c.user == user).ToList();
+
+            return Ok(countries);
         }
     }
 
