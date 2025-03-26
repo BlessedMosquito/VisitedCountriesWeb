@@ -41,7 +41,7 @@ public class AuthController : ControllerBase
 
         if (!string.IsNullOrEmpty(model.Email))
         {
-            user = await _userManager.FindByEmailAsync(model.Email); // Szuka użytkownika po emailu
+            user = await _userManager.FindByEmailAsync(model.Email);
         }
 
         if (user == null)
@@ -56,6 +56,9 @@ public class AuthController : ControllerBase
         }
 
         await _signInManager.SignInAsync(user, isPersistent: true);
+
+        System.Console.WriteLine("User logged in: " + user.UserName);
+        System.Console.WriteLine("Cookies: " + Request.Cookies.Count);
 
 
         return Ok(new {});

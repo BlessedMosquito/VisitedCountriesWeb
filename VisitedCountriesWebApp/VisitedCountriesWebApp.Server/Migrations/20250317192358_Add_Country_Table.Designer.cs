@@ -3,6 +3,7 @@ using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using VisitedCountriesWeb.Server.Data;
 
@@ -11,9 +12,11 @@ using VisitedCountriesWeb.Server.Data;
 namespace VisitedCountriesWebApp.Server.Migrations
 {
     [DbContext(typeof(AppDbContext))]
-    partial class AppDbContextModelSnapshot : ModelSnapshot
+    [Migration("20250317192358_Add_Country_Table")]
+    partial class Add_Country_Table
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -228,12 +231,9 @@ namespace VisitedCountriesWebApp.Server.Migrations
                     b.Property<long>("area")
                         .HasColumnType("bigint");
 
-                    b.Property<string>("capital")
+                    b.Property<string>("capitl")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
-
-                    b.Property<DateTime>("dateVisited")
-                        .HasColumnType("datetime2");
 
                     b.Property<string>("name")
                         .IsRequired()
@@ -251,11 +251,10 @@ namespace VisitedCountriesWebApp.Server.Migrations
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("userId")
-                        .HasColumnType("nvarchar(450)");
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
 
                     b.HasKey("Id");
-
-                    b.HasIndex("userId");
 
                     b.ToTable("Countries");
                 });
@@ -309,15 +308,6 @@ namespace VisitedCountriesWebApp.Server.Migrations
                         .HasForeignKey("UserId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
-                });
-
-            modelBuilder.Entity("VisitedCountriesWebApp.Server.Data.CountryDatabase", b =>
-                {
-                    b.HasOne("Microsoft.AspNetCore.Identity.IdentityUser", "user")
-                        .WithMany()
-                        .HasForeignKey("userId");
-
-                    b.Navigation("user");
                 });
 #pragma warning restore 612, 618
         }

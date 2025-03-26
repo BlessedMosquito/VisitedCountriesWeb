@@ -55,7 +55,7 @@ namespace VisitedCountriesWebApp.Server.Data
                                     $"Language: {(Languages != null && Languages.Count > 0 ? string.Join(", ", Languages.Values) : "Not Available")}\n" +
                                     $"Currency: {string.Join(", ", Currencies?.Values.Select(c => c.Name) ?? new List<string>())}\n" +
                                     $"Region: {Region}\n" +
-                                    $"Flag: {Flag}";
+                                    $"Area: {Area}";
 
             return countryDetails;
         }

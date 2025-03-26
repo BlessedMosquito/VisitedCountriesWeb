@@ -32,9 +32,9 @@ builder.Services.ConfigureApplicationCookie(options =>
     options.LoginPath = "/api/Auth/login";
     options.Cookie.HttpOnly = true;  
     options.Cookie.SecurePolicy = CookieSecurePolicy.Always;
-    options.Cookie.SameSite = SameSiteMode.Lax;
+    //options.Cookie.SameSite = SameSiteMode.Lax;
     options.ExpireTimeSpan = TimeSpan.FromMinutes(30);
-    options.Cookie.Domain = ".localhost";
+    //options.Cookie.Domain = ".localhost";
 });
 
 // Rejestracja innych serwisów

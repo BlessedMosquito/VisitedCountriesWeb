@@ -5,6 +5,8 @@ export default function SearchPage() {
     const [countryName, setCountryName] = useState("");
     const [country, setCountry] = useState(null);
     const [error, setError] = useState(null);
+    const [visitDate, setVisitDate] = useState("");
+    const [showModal, setShowModal] = useState(false);
 
 
     const handleSearch = async() => {
@@ -18,6 +20,29 @@ export default function SearchPage() {
         catch (error) {
             setError(error.message);
         }
+    }
+
+    const handleAddButton = async () => {
+        if (country != null && visitDate) {
+            try {
+                const formattedDate = new Date(visitDate).toLocaleDateString("en-US", {
+                    year: "numeric",
+                    month: "long",
+                });
+                console.log("Cookies:", document.cookie);
+                console.log(formattedDate);
+                await axios.post("https://localhost:7225/api/country/add", { country: country, visitDate: formattedDate }, { withCredentials: true });
+                setShowModal(false);
+                alert(`Added ${country.name.common} as visited on ${visitDate}`);
+            }
+            catch(error) {
+                setError(error.message);
+            }
+        }
+    }
+
+    const handleDatePicker = async () => {
+        setShowModal(true);
     }
 
 
@@ -43,6 +68,21 @@ export default function SearchPage() {
                     <p><strong>Languages:</strong> {country.languages ? Object.values(country.languages).join(", ") : "N/A"}</p>
                     <p><strong>Currency:</strong> {country.currencies ? Object.values(country.currencies).map(c => `${c.name} (${c.symbol})`).join(", ") : "N/A"}</p>
                     <p><strong>Timezones:</strong> {country.timezones?.join(", ")}</p>
+                    <button onClick={handleDatePicker}>Add as visited</button>
+                </div>
+            )}
+            {showModal && (
+                <div className="modal">
+                    <div className="modal-content">
+                        <h2>Select Visit Date</h2>
+                        <input
+                            type="date"
+                            value={visitDate}
+                            onChange={(e) => setVisitDate(e.target.value)}
+                        />
+                        <button onClick={handleAddButton}>Save</button>
+                        <button onClick={() => setShowModal(false)}>Cancel</button>
+                    </div>
                 </div>
             )}
         </div>

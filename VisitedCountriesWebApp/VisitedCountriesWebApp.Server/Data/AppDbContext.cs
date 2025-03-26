@@ -1,6 +1,7 @@
 ﻿using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
+using VisitedCountriesWebApp.Server.Data;
 
 namespace VisitedCountriesWeb.Server.Data
 {
@@ -16,5 +17,8 @@ namespace VisitedCountriesWeb.Server.Data
         {
             optionsBuilder.UseSqlServer(_config.GetConnectionString("DatabaseConnection"));
         }
+
+
+        public DbSet<CountryDatabase> Countries { get; set; }
     }
 }

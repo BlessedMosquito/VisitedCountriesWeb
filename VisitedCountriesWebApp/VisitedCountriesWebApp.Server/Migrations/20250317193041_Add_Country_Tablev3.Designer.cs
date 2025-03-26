@@ -3,6 +3,7 @@ using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using VisitedCountriesWeb.Server.Data;
 
@@ -11,9 +12,11 @@ using VisitedCountriesWeb.Server.Data;
 namespace VisitedCountriesWebApp.Server.Migrations
 {
     [DbContext(typeof(AppDbContext))]
-    partial class AppDbContextModelSnapshot : ModelSnapshot
+    [Migration("20250317193041_Add_Country_Tablev3")]
+    partial class Add_Country_Tablev3
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -225,15 +228,15 @@ namespace VisitedCountriesWebApp.Server.Migrations
                     b.Property<string>("Id")
                         .HasColumnType("nvarchar(450)");
 
+                    b.Property<string>("UserId")
+                        .HasColumnType("nvarchar(450)");
+
                     b.Property<long>("area")
                         .HasColumnType("bigint");
 
-                    b.Property<string>("capital")
+                    b.Property<string>("capitl")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
-
-                    b.Property<DateTime>("dateVisited")
-                        .HasColumnType("datetime2");
 
                     b.Property<string>("name")
                         .IsRequired()
@@ -250,12 +253,9 @@ namespace VisitedCountriesWebApp.Server.Migrations
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<string>("userId")
-                        .HasColumnType("nvarchar(450)");
-
                     b.HasKey("Id");
 
-                    b.HasIndex("userId");
+                    b.HasIndex("UserId");
 
                     b.ToTable("Countries");
                 });
@@ -313,11 +313,11 @@ namespace VisitedCountriesWebApp.Server.Migrations
 
             modelBuilder.Entity("VisitedCountriesWebApp.Server.Data.CountryDatabase", b =>
                 {
-                    b.HasOne("Microsoft.AspNetCore.Identity.IdentityUser", "user")
+                    b.HasOne("Microsoft.AspNetCore.Identity.IdentityUser", "User")
                         .WithMany()
-                        .HasForeignKey("userId");
+                        .HasForeignKey("UserId");
 
-                    b.Navigation("user");
+                    b.Navigation("User");
                 });
 #pragma warning restore 612, 618
         }

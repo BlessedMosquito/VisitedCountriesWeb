@@ -31,5 +31,6 @@ namespace VisitedCountriesWebApp.Server.Controllers
 
             return Ok(new {username = user.UserName });
         }
+
     }
 }
