@@ -6,17 +6,27 @@ function RegisterPage() {
     const [userName, setUsername] = useState("");
     const [email, setEmail] = useState("");
     const [password, setPassword] = useState("");
-    const [message, setMessage] = useState("");
     const [confirmPassword, setConfirmPassword] = useState("");
+    const [loading, setLoading] = useState(false);
+    const [error, setError] = useState(null);
     const navigate = useNavigate();
 
     const handleRegister = async () => {
+        setLoading(true);
+        setError(null);
         try {
             await register(userName, email, password, confirmPassword);
-            setMessage("Registration successful!");
             navigate("/login");
         } catch (error) {
-            setMessage(error.message);
+            console.log(error.message);
+            setError("An error occurred. Please try again.");
+            setUsername("");
+            setEmail("");
+            setPassword("");
+            setConfirmPassword("");
+        }
+        finally {
+            setLoading(false);
         }
     };
 
@@ -28,31 +38,36 @@ function RegisterPage() {
                 placeholder="UserName"
                 value={userName}
                 onChange={(e) => setUsername(e.target.value)}
-                className="form-input"
+                className={`form-input ${loading ? 'hidden' : ''}`}
             />
             <input
                 type="email"
                 placeholder="Email"
                 value={email}
                 onChange={(e) => setEmail(e.target.value)}
-                className="form-input"
+                className={`form-input ${loading ? 'hidden' : ''}`}
             />
             <input
                 type="password"
                 placeholder="Password"
                 value={password}
                 onChange={(e) => setPassword(e.target.value)}
-                className="form-input"
+                className={`form-input ${loading ? 'hidden' : ''}`}
             />
             <input
                 type="password"
                 placeholder="Confirm Password"
                 value={confirmPassword}
                 onChange={(e) => setConfirmPassword(e.target.value)}
-                className="form-input"
+                className={`form-input ${loading ? 'hidden' : ''}`}
             />
-            <button onClick={handleRegister} className="form-button">Register</button>
-            {message && <p>{message}</p>}
+
+            {loading ? (
+                <div className="random-spinner"></div>
+            ) : (
+                <button onClick={handleRegister} className="form-button">Register</button>
+            )}
+            {error && <p style={{ color: "red" }}>{error}</p>}
         </div>
     );
 }

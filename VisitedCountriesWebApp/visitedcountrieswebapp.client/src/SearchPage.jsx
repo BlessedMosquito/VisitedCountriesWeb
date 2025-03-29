@@ -1,45 +1,53 @@
 import React, { useState } from "react";
 import axios from "axios";
+import "react-datepicker/dist/react-datepicker.css";
+import DatePicker from "react-datepicker";
 
 export default function SearchPage() {
     const [countryName, setCountryName] = useState("");
     const [country, setCountry] = useState(null);
     const [error, setError] = useState(null);
-    const [visitDate, setVisitDate] = useState("");
+    const [visitDate, setVisitDate] = useState(null);
     const [showModal, setShowModal] = useState(false);
+    const [errorModal, setErrorModal] = useState(null);
 
 
-    const handleSearch = async() => {
-        setError(null);
-        setCountry(null);
-
+    const handleSearch = async () => {
         try {
             const response = await axios.post("https://localhost:7225/api/countries/search", { countryName });
             setCountry(response.data);
+            setError(null);
         }
         catch (error) {
-            setError(error.message);
+            console.log(error.message);
+            if (error.response && error.response.status === 404) {
+                setError("Country not found");
+            } else {
+                setError("An error occurred. Please try again.");
+            }
         }
     }
 
     const handleAddButton = async () => {
-        if (country != null && visitDate) {
+        if (visitDate === null) {
+            setErrorModal("Please select a date");
+        }
             try {
-                const formattedDate = new Date(visitDate).toLocaleDateString("en-US", {
+                const formattedDate = visitDate.toLocaleDateString("en-US", {
                     year: "numeric",
                     month: "long",
                 });
-                console.log("Cookies:", document.cookie);
-                console.log(formattedDate);
-                await axios.post("https://localhost:7225/api/country/add", { country: country, visitDate: formattedDate }, { withCredentials: true });
+                await axios.post("https://localhost:7225/api/country/add",
+                    { country: country, visitDate: formattedDate },
+                    { withCredentials: true });
                 setShowModal(false);
-                alert(`Added ${country.name.common} as visited on ${visitDate}`);
+                alert(`Added ${country.name.common} as visited on ${formattedDate}`);
             }
-            catch(error) {
-                setError(error.message);
+            catch (error) {
+                console.log(error.message);
             }
-        }
     }
+
 
     const handleDatePicker = async () => {
         setShowModal(true);
@@ -74,14 +82,21 @@ export default function SearchPage() {
             {showModal && (
                 <div className="modal">
                     <div className="modal-content">
+                        {errorModal && <p style={{ color: "red" }}>{errorModal}</p>}
                         <h2>Select Visit Date</h2>
-                        <input
-                            type="date"
-                            value={visitDate}
-                            onChange={(e) => setVisitDate(e.target.value)}
+                        <DatePicker
+                            selected={visitDate}
+                            onChange={(date) => setVisitDate(date)}
+                            showMonthYearPicker
+                            dateFormat="MM-yyyy"
+                            className="datepicker-input"
                         />
                         <button onClick={handleAddButton}>Save</button>
-                        <button onClick={() => setShowModal(false)}>Cancel</button>
+                        <button onClick={() => {
+                            setShowModal(false);
+                            setVisitDate(null);
+                            setErrorModal(null);
+                        }}>Cancel</button>
                     </div>
                 </div>
             )}

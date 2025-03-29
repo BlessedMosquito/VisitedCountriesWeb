@@ -20,8 +20,8 @@ const CountryTable = () => {
 
 
     return (
-        <div>
-            <table>
+        <div className="table-container">
+            <table className="table">
                 <thead>
                     <tr>
                         <th>#</th>
