@@ -2,7 +2,8 @@ import { useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import axios from "axios";
 import React, { useState } from "react";
-import {isAuthenticated} from "./AuthService";
+import { isAuthenticated } from "./AuthService";
+import WorldMap from "./WorldMap";
 
 export default function MainPage() {
     const [username, setUsername] = useState("");
@@ -37,6 +38,7 @@ export default function MainPage() {
     return (
         <div>
             <h1>Welcome, {username ? username : "User"}</h1>
+            <WorldMap />
             <button onClick={searchRoute}>Search</button>
             <button onClick={tableRoute}>Table</button>
         </div>

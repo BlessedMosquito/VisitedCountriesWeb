@@ -331,3 +331,32 @@ button {
     visibility: hidden; /* Ukrywa element */
 }
 
+
+.geography {
+    fill: #6d6d6d;
+    stroke: #333;
+    stroke-width: 0.5;
+    overflow: hidden;
+}
+
+    .geography:hover {
+        fill: #AD1DEB;
+    }
+
+
+
+.map-div {
+    position: relative;
+    overflow: hidden;
+    height: 70vh;
+    width: 70%;
+    margin: 0 auto;
+    border: 3px solid #1a1a1a ;
+    padding: 10px;
+    border-radius: 15px;
+}
+
+
+.visited {
+    fill: #6E72FC;
+}

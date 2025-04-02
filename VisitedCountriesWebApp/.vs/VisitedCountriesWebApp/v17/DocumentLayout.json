@@ -3,20 +3,32 @@
   "WorkspaceRootPath": "D:\\VisitedCountriesApp\\VisitedCountriesWeb\\VisitedCountriesWebApp\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{6A0613F8-43D2-4613-BD93-966188348937}|visitedcountrieswebapp.client\\visitedcountrieswebapp.client.esproj|d:\\visitedcountriesapp\\visitedcountriesweb\\visitedcountrieswebapp\\visitedcountrieswebapp.client\\src\\planespinner.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
-      "RelativeMoniker": "D:0:0:{6A0613F8-43D2-4613-BD93-966188348937}|visitedcountrieswebapp.client\\visitedcountrieswebapp.client.esproj|solutionrelative:visitedcountrieswebapp.client\\src\\planespinner.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{6A0613F8-43D2-4613-BD93-966188348937}|visitedcountrieswebapp.client\\visitedcountrieswebapp.client.esproj|d:\\visitedcountriesapp\\visitedcountriesweb\\visitedcountrieswebapp\\visitedcountrieswebapp.client\\src\\searchpage.jsx||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
-      "RelativeMoniker": "D:0:0:{6A0613F8-43D2-4613-BD93-966188348937}|visitedcountrieswebapp.client\\visitedcountrieswebapp.client.esproj|solutionrelative:visitedcountrieswebapp.client\\src\\searchpage.jsx||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{AC79545F-1705-4494-9BEE-9F8F35AFA610}|VisitedCountriesWebApp.Server\\VisitedCountriesWebApp.Server.csproj|d:\\visitedcountriesapp\\visitedcountriesweb\\visitedcountrieswebapp\\visitedcountrieswebapp.server\\controllers\\apiquerycontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{AC79545F-1705-4494-9BEE-9F8F35AFA610}|VisitedCountriesWebApp.Server\\VisitedCountriesWebApp.Server.csproj|solutionrelative:visitedcountrieswebapp.server\\controllers\\apiquerycontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{6A0613F8-43D2-4613-BD93-966188348937}|visitedcountrieswebapp.client\\visitedcountrieswebapp.client.esproj|d:\\visitedcountriesapp\\visitedcountriesweb\\visitedcountrieswebapp\\visitedcountrieswebapp.client\\src\\worldmap.jsx||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
+      "RelativeMoniker": "D:0:0:{6A0613F8-43D2-4613-BD93-966188348937}|visitedcountrieswebapp.client\\visitedcountrieswebapp.client.esproj|solutionrelative:visitedcountrieswebapp.client\\src\\worldmap.jsx||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{AC79545F-1705-4494-9BEE-9F8F35AFA610}|VisitedCountriesWebApp.Server\\VisitedCountriesWebApp.Server.csproj|d:\\visitedcountriesapp\\visitedcountriesweb\\visitedcountrieswebapp\\visitedcountrieswebapp.server\\controllers\\countrycontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{AC79545F-1705-4494-9BEE-9F8F35AFA610}|VisitedCountriesWebApp.Server\\VisitedCountriesWebApp.Server.csproj|solutionrelative:visitedcountrieswebapp.server\\controllers\\countrycontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6A0613F8-43D2-4613-BD93-966188348937}|visitedcountrieswebapp.client\\visitedcountrieswebapp.client.esproj|d:\\visitedcountriesapp\\visitedcountriesweb\\visitedcountrieswebapp\\visitedcountrieswebapp.client\\src\\mainpage.jsx||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
+      "RelativeMoniker": "D:0:0:{6A0613F8-43D2-4613-BD93-966188348937}|visitedcountrieswebapp.client\\visitedcountrieswebapp.client.esproj|solutionrelative:visitedcountrieswebapp.client\\src\\mainpage.jsx||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6A0613F8-43D2-4613-BD93-966188348937}|visitedcountrieswebapp.client\\visitedcountrieswebapp.client.esproj|d:\\visitedcountriesapp\\visitedcountriesweb\\visitedcountrieswebapp\\visitedcountrieswebapp.client\\src\\planespinner.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
+      "RelativeMoniker": "D:0:0:{6A0613F8-43D2-4613-BD93-966188348937}|visitedcountrieswebapp.client\\visitedcountrieswebapp.client.esproj|solutionrelative:visitedcountrieswebapp.client\\src\\planespinner.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6A0613F8-43D2-4613-BD93-966188348937}|visitedcountrieswebapp.client\\visitedcountrieswebapp.client.esproj|d:\\visitedcountriesapp\\visitedcountriesweb\\visitedcountrieswebapp\\visitedcountrieswebapp.client\\src\\loginpage.jsx||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
+      "RelativeMoniker": "D:0:0:{6A0613F8-43D2-4613-BD93-966188348937}|visitedcountrieswebapp.client\\visitedcountrieswebapp.client.esproj|solutionrelative:visitedcountrieswebapp.client\\src\\loginpage.jsx||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6A0613F8-43D2-4613-BD93-966188348937}|visitedcountrieswebapp.client\\visitedcountrieswebapp.client.esproj|d:\\visitedcountriesapp\\visitedcountriesweb\\visitedcountrieswebapp\\visitedcountrieswebapp.client\\src\\registerpage.jsx||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
+      "RelativeMoniker": "D:0:0:{6A0613F8-43D2-4613-BD93-966188348937}|visitedcountrieswebapp.client\\visitedcountrieswebapp.client.esproj|solutionrelative:visitedcountrieswebapp.client\\src\\registerpage.jsx||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6A0613F8-43D2-4613-BD93-966188348937}|visitedcountrieswebapp.client\\visitedcountrieswebapp.client.esproj|d:\\visitedcountriesapp\\visitedcountriesweb\\visitedcountrieswebapp\\visitedcountrieswebapp.client\\src\\world-110m.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{6A0613F8-43D2-4613-BD93-966188348937}|visitedcountrieswebapp.client\\visitedcountrieswebapp.client.esproj|solutionrelative:visitedcountrieswebapp.client\\src\\world-110m.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{6A0613F8-43D2-4613-BD93-966188348937}|visitedcountrieswebapp.client\\visitedcountrieswebapp.client.esproj|d:\\visitedcountriesapp\\visitedcountriesweb\\visitedcountrieswebapp\\visitedcountrieswebapp.client\\src\\index.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
@@ -25,6 +37,14 @@
     {
       "AbsoluteMoniker": "D:0:0:{6A0613F8-43D2-4613-BD93-966188348937}|visitedcountrieswebapp.client\\visitedcountrieswebapp.client.esproj|d:\\visitedcountriesapp\\visitedcountriesweb\\visitedcountrieswebapp\\visitedcountrieswebapp.client\\src\\app.jsx||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
       "RelativeMoniker": "D:0:0:{6A0613F8-43D2-4613-BD93-966188348937}|visitedcountrieswebapp.client\\visitedcountrieswebapp.client.esproj|solutionrelative:visitedcountrieswebapp.client\\src\\app.jsx||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6A0613F8-43D2-4613-BD93-966188348937}|visitedcountrieswebapp.client\\visitedcountrieswebapp.client.esproj|d:\\visitedcountriesapp\\visitedcountriesweb\\visitedcountrieswebapp\\visitedcountrieswebapp.client\\src\\searchpage.jsx||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
+      "RelativeMoniker": "D:0:0:{6A0613F8-43D2-4613-BD93-966188348937}|visitedcountrieswebapp.client\\visitedcountrieswebapp.client.esproj|solutionrelative:visitedcountrieswebapp.client\\src\\searchpage.jsx||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AC79545F-1705-4494-9BEE-9F8F35AFA610}|VisitedCountriesWebApp.Server\\VisitedCountriesWebApp.Server.csproj|d:\\visitedcountriesapp\\visitedcountriesweb\\visitedcountrieswebapp\\visitedcountrieswebapp.server\\controllers\\apiquerycontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{AC79545F-1705-4494-9BEE-9F8F35AFA610}|VisitedCountriesWebApp.Server\\VisitedCountriesWebApp.Server.csproj|solutionrelative:visitedcountrieswebapp.server\\controllers\\apiquerycontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{6A0613F8-43D2-4613-BD93-966188348937}|visitedcountrieswebapp.client\\visitedcountrieswebapp.client.esproj|d:\\visitedcountriesapp\\visitedcountriesweb\\visitedcountrieswebapp\\visitedcountrieswebapp.client\\src\\tablepage.jsx||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
@@ -38,7 +58,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 5,
+          "SelectedChildIndex": 6,
           "Children": [
             {
               "$type": "Bookmark",
@@ -62,20 +82,85 @@
             },
             {
               "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "MainPage.jsx",
+              "DocumentMoniker": "D:\\VisitedCountriesApp\\VisitedCountriesWeb\\VisitedCountriesWebApp\\visitedcountrieswebapp.client\\src\\MainPage.jsx",
+              "RelativeDocumentMoniker": "visitedcountrieswebapp.client\\src\\MainPage.jsx",
+              "ToolTip": "D:\\VisitedCountriesApp\\VisitedCountriesWeb\\VisitedCountriesWebApp\\visitedcountrieswebapp.client\\src\\MainPage.jsx",
+              "RelativeToolTip": "visitedcountrieswebapp.client\\src\\MainPage.jsx",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAIAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003663|",
+              "WhenOpened": "2025-03-30T18:23:33.291Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
               "DocumentIndex": 0,
+              "Title": "WorldMap.jsx",
+              "DocumentMoniker": "D:\\VisitedCountriesApp\\VisitedCountriesWeb\\VisitedCountriesWebApp\\visitedcountrieswebapp.client\\src\\WorldMap.jsx",
+              "RelativeDocumentMoniker": "visitedcountrieswebapp.client\\src\\WorldMap.jsx",
+              "ToolTip": "D:\\VisitedCountriesApp\\VisitedCountriesWeb\\VisitedCountriesWebApp\\visitedcountrieswebapp.client\\src\\WorldMap.jsx",
+              "RelativeToolTip": "visitedcountrieswebapp.client\\src\\WorldMap.jsx",
+              "ViewState": "AQIAACkAAAAAAAAAAAAQwEcAAAAoAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003663|",
+              "WhenOpened": "2025-03-30T18:21:32.697Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "world-110m.json",
+              "DocumentMoniker": "D:\\VisitedCountriesApp\\VisitedCountriesWeb\\VisitedCountriesWebApp\\visitedcountrieswebapp.client\\src\\world-110m.json",
+              "RelativeDocumentMoniker": "visitedcountrieswebapp.client\\src\\world-110m.json",
+              "ToolTip": "D:\\VisitedCountriesApp\\VisitedCountriesWeb\\VisitedCountriesWebApp\\visitedcountrieswebapp.client\\src\\world-110m.json",
+              "RelativeToolTip": "visitedcountrieswebapp.client\\src\\world-110m.json",
+              "ViewState": "AQIAAAwAAAAAAAAAAAAAABwAAAAeAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2025-03-30T18:16:04.324Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "RegisterPage.jsx",
+              "DocumentMoniker": "D:\\VisitedCountriesApp\\VisitedCountriesWeb\\VisitedCountriesWebApp\\visitedcountrieswebapp.client\\src\\RegisterPage.jsx",
+              "RelativeDocumentMoniker": "visitedcountrieswebapp.client\\src\\RegisterPage.jsx",
+              "ToolTip": "D:\\VisitedCountriesApp\\VisitedCountriesWeb\\VisitedCountriesWebApp\\visitedcountrieswebapp.client\\src\\RegisterPage.jsx",
+              "RelativeToolTip": "visitedcountrieswebapp.client\\src\\RegisterPage.jsx",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAIAAAApAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003663|",
+              "WhenOpened": "2025-03-29T17:40:54.27Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "LoginPage.jsx",
+              "DocumentMoniker": "D:\\VisitedCountriesApp\\VisitedCountriesWeb\\VisitedCountriesWebApp\\visitedcountrieswebapp.client\\src\\LoginPage.jsx",
+              "RelativeDocumentMoniker": "visitedcountrieswebapp.client\\src\\LoginPage.jsx",
+              "ToolTip": "D:\\VisitedCountriesApp\\VisitedCountriesWeb\\VisitedCountriesWebApp\\visitedcountrieswebapp.client\\src\\LoginPage.jsx",
+              "RelativeToolTip": "visitedcountrieswebapp.client\\src\\LoginPage.jsx",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAADIAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003663|",
+              "WhenOpened": "2025-03-29T16:22:19.923Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
               "Title": "PlaneSpinner.css",
               "DocumentMoniker": "D:\\VisitedCountriesApp\\VisitedCountriesWeb\\VisitedCountriesWebApp\\visitedcountrieswebapp.client\\src\\PlaneSpinner.css",
               "RelativeDocumentMoniker": "visitedcountrieswebapp.client\\src\\PlaneSpinner.css",
-              "ToolTip": "D:\\VisitedCountriesApp\\VisitedCountriesWeb\\VisitedCountriesWebApp\\visitedcountrieswebapp.client\\src\\PlaneSpinner.css*",
-              "RelativeToolTip": "visitedcountrieswebapp.client\\src\\PlaneSpinner.css*",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAYAAAAAAAAA",
+              "ToolTip": "D:\\VisitedCountriesApp\\VisitedCountriesWeb\\VisitedCountriesWebApp\\visitedcountrieswebapp.client\\src\\PlaneSpinner.css",
+              "RelativeToolTip": "visitedcountrieswebapp.client\\src\\PlaneSpinner.css",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAACkAAAAhAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
               "WhenOpened": "2025-03-29T16:09:11.671Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 10,
               "Title": "APIQueryController.cs",
               "DocumentMoniker": "D:\\VisitedCountriesApp\\VisitedCountriesWeb\\VisitedCountriesWebApp\\VisitedCountriesWebApp.Server\\Controllers\\APIQueryController.cs",
               "RelativeDocumentMoniker": "VisitedCountriesWebApp.Server\\Controllers\\APIQueryController.cs",
@@ -87,31 +172,32 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 1,
               "Title": "CountryController.cs",
               "DocumentMoniker": "D:\\VisitedCountriesApp\\VisitedCountriesWeb\\VisitedCountriesWebApp\\VisitedCountriesWebApp.Server\\Controllers\\CountryController.cs",
               "RelativeDocumentMoniker": "VisitedCountriesWebApp.Server\\Controllers\\CountryController.cs",
               "ToolTip": "D:\\VisitedCountriesApp\\VisitedCountriesWeb\\VisitedCountriesWebApp\\VisitedCountriesWebApp.Server\\Controllers\\CountryController.cs",
               "RelativeToolTip": "VisitedCountriesWebApp.Server\\Controllers\\CountryController.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "ViewState": "AQIAACQAAAAAAAAAAAAowE8AAAAFAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-28T20:11:23.865Z"
+              "WhenOpened": "2025-03-28T20:11:23.865Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 7,
               "Title": "index.css",
               "DocumentMoniker": "D:\\VisitedCountriesApp\\VisitedCountriesWeb\\VisitedCountriesWebApp\\visitedcountrieswebapp.client\\src\\index.css",
               "RelativeDocumentMoniker": "visitedcountrieswebapp.client\\src\\index.css",
               "ToolTip": "D:\\VisitedCountriesApp\\VisitedCountriesWeb\\VisitedCountriesWebApp\\visitedcountrieswebapp.client\\src\\index.css",
               "RelativeToolTip": "visitedcountrieswebapp.client\\src\\index.css",
-              "ViewState": "AQIAAIMAAAAAAAAAAAAwwJgAAAASAAAA",
+              "ViewState": "AQIAAE0BAAAAAAAAAAAAAGMBAAAYAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
               "WhenOpened": "2025-03-25T15:07:18.047Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 8,
               "Title": "App.jsx",
               "DocumentMoniker": "D:\\VisitedCountriesApp\\VisitedCountriesWeb\\VisitedCountriesWebApp\\visitedcountrieswebapp.client\\src\\App.jsx",
               "RelativeDocumentMoniker": "visitedcountrieswebapp.client\\src\\App.jsx",
@@ -123,7 +209,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 11,
               "Title": "TablePage.jsx",
               "DocumentMoniker": "D:\\VisitedCountriesApp\\VisitedCountriesWeb\\VisitedCountriesWebApp\\visitedcountrieswebapp.client\\src\\TablePage.jsx",
               "RelativeDocumentMoniker": "visitedcountrieswebapp.client\\src\\TablePage.jsx",
@@ -135,16 +221,15 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 9,
               "Title": "SearchPage.jsx",
               "DocumentMoniker": "D:\\VisitedCountriesApp\\VisitedCountriesWeb\\VisitedCountriesWebApp\\visitedcountrieswebapp.client\\src\\SearchPage.jsx",
               "RelativeDocumentMoniker": "visitedcountrieswebapp.client\\src\\SearchPage.jsx",
               "ToolTip": "D:\\VisitedCountriesApp\\VisitedCountriesWeb\\VisitedCountriesWebApp\\visitedcountrieswebapp.client\\src\\SearchPage.jsx",
               "RelativeToolTip": "visitedcountrieswebapp.client\\src\\SearchPage.jsx",
-              "ViewState": "AQIAAAUAAAAAAAAAAAAxwBIAAAAbAAAA",
+              "ViewState": "AQIAADIAAAAAAAAAAAAQwEMAAAA+AAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003663|",
-              "WhenOpened": "2025-03-25T13:55:48.101Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-03-25T13:55:48.101Z"
             }
           ]
         }
