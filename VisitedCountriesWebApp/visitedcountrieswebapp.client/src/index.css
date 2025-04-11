@@ -214,6 +214,11 @@ body {
         transition: background-color 0.3s;
     }
 
+    .selected-row {
+        background-color: #5a5a5a;
+        transition: background-color 0.3s;
+    }
+
 .datepicker-input {
     padding: 10px;
     font-size: 16px;
@@ -328,7 +333,7 @@ button {
 
 
 .hidden {
-    visibility: hidden; /* Ukrywa element */
+    visibility: hidden; 
 }
 
 

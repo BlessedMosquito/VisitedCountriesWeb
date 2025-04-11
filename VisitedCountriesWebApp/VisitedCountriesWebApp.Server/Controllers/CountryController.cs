@@ -71,6 +71,30 @@ namespace VisitedCountriesWebApp.Server.Controllers
 
             return Ok(countries);
         }
+
+
+        [Authorize]
+        [HttpDelete("delete/{id}")]
+        public async Task<IActionResult> DeleteCountry(string id)
+        {
+            var user = await _userManager.GetUserAsync(HttpContext.User);
+            if (user == null)
+            {
+                System.Console.WriteLine("User is null, authentication failed!");
+                return Unauthorized("User not found");
+            }
+
+            var country = _context.Countries.FirstOrDefault(c => c.Id == id && c.user == user);
+            if (country == null)
+            {
+                return NotFound("Country not found");
+            }
+
+            _context.Countries.Remove(country);
+            await _context.SaveChangesAsync();
+
+            return Ok();
+        }
     }
 
     public class AddCountryRequest
