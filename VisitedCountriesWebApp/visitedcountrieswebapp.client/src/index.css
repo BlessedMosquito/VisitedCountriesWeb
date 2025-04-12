@@ -79,6 +79,7 @@ body {
     gap: 2rem;
     padding: 0 1rem;
     box-sizing: border-box;
+    border-radius: 15px;
 }
 
     .nav-bar ul {
@@ -245,10 +246,12 @@ button {
     background-color: #1a1a1a;
     cursor: pointer;
     transition: border-color 0.25s;
+
 }
 
     button:hover {
-        border-color: #646cff;
+        border-color: #fff;
+        background-color: #242424;
     }
 
     button:focus,
@@ -364,4 +367,17 @@ button {
 
 .visited {
     fill: #6E72FC;
+}
+
+.rotating-globe {
+    animation: spin 20s linear infinite;
+}
+
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
 }

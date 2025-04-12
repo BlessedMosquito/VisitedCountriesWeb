@@ -37,7 +37,6 @@ const CountryTable = () => {
     }
 
 
-
     return (
         <div className="table-container">
             <table className="table">
